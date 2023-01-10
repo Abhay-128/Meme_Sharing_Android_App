@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C2701"
+    android:fadingEdge="horizontal"
+    android:outlineProvider="none"
+    android:textAlignment="center"
+    app:layout_scrollEffect="none"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/MemeImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="false"
+        android:background="@drawable/gradient"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonShare"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBarForAPIFetch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/MemeImageView"
+        app:layout_constraintLeft_toLeftOf="@id/MemeImageView"
+        app:layout_constraintRight_toRightOf="@id/MemeImageView"
+        app:layout_constraintTop_toTopOf="@id/MemeImageView" />
+
+
+    <Button
+        android:id="@+id/buttonShare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#B59807"
+        android:elevation="40dp"
+        android:letterSpacing="0.5"
+        android:padding="30dp"
+        android:text="@string/share_button_string"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline_vertical_Main"
+        app:layout_constraintTop_toBottomOf="@id/MemeImageView"
+        app:toggleCheckedStateOnClick="false" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:autoText="false"
+        android:backgroundTint="#B59807"
+
+        android:cursorVisible="false"
+        android:elevation="40dp"
+        android:ellipsize="none"
+        android:fadeScrollbars="false"
+        android:letterSpacing="0.5"
+        android:padding="30dp"
+        android:rotation="0"
+        android:soundEffectsEnabled="false"
+        android:text="@string/next_button_string"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:cornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline_vertical_Main"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/MemeImageView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
